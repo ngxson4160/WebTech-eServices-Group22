@@ -1,0 +1,57 @@
+<HTML>
+    <head>
+    </head>
+    <body>
+        <body>
+            <div>
+                <a href="http://webcoban.vn/image/hugo.jpg" id="link1" style="color: red" >
+                    RED
+                </a>
+                <p id="paragraph1">
+                    chuyển thành đỏ
+                </p>
+            </div>
+            <div>
+                <a href="http://webcoban.vn/image/hugo.jpg" id="link2" style="color: blue" >
+                    BlUE
+                </a>
+                <p id="paragraph2">
+                    chuyển thành xanh dương
+                </p>
+            </div>
+            <div>
+                <a href="http://webcoban.vn/image/hugo.jpg" id="link3" style="color: green" >
+                    GREEN
+                </a>
+                <p id="paragraph3">
+                    chuyển thành xanh lục
+                </p>
+            </div>
+            <script>
+                var obj1 = document.getElementById('link1');
+                obj1.onmouseout = function(){
+                    document.getElementById('paragraph1').style.color = 'black';
+                };
+                obj1.onmouseover = function(){
+                    document.getElementById('paragraph1').style.color = 'red';
+                };
+                //            
+                var obj2 = document.getElementById('link2');
+                obj2.onmouseout = function(){
+                    document.getElementById('paragraph2').style.color = 'black';
+                };
+                obj2.onmouseover = function(){
+                    document.getElementById('paragraph2').style.color = 'blue';
+                };
+                //
+                var obj3 = document.getElementById('link3');
+                obj3.onmouseout = function(){
+                    document.getElementById('paragraph3').style.color = 'black';
+                };
+                obj3.onmouseover = function(){
+                    document.getElementById('paragraph3').style.color = 'green';
+                };
+            </script>
+            </body>
+    </body>
+</html>

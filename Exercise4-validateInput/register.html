@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <!--nhúng file css-->
+        <link rel = "stylesheet" href="style.css"/>
+        <!--nhúng file js-->
+        <script language="javascript" src="check.js"></script>
+    </head>
+    <body>
+        <form action = "" method = "POST" >
+            <div class = "register">
+                <h1> Đăng kí</h1>
+                <p>Vui lòng điền thông tin để đăng kí</p>
+                <hr>
+                <!-- tên đăng nhập-->
+                <label for="username">
+                    <b> Tên đăng nhập
+                </label>
+                <input type="text" placeholder="Họ và tên" name="username" id="username">
+                <!--email-->
+                <label for="email">
+                    <b> Email
+                </label>
+                <input type="email" placeholder="Example@gmail.com" name="email" id="email">
+                <!--sdt-->
+                <label for="phonenumber">
+                    <b> Số điện thoại
+                </label>
+                <input type="number" placeholder="SDT" name="phonenumber" id="phonenumber">
+                <!--password-->
+                <label for="password">
+                    <b> Mật khẩu
+                </label>
+                <input type="password" placeholder="****" name="password" id="password">
+                <!--password-repeat-->
+                <label for="password-repeat">
+                    <b> Nhập lại mật khẩu
+                </label>
+                <input type="password" placeholder="****" name="password-repeat" id="password-repeat">
+                <!---->
+                <button type="submit" class="submit" onclick="validate()">Đăng ký</button>
+            </div>
+        </form>
+    </body>
+</html>
