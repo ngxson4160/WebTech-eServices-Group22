@@ -14,9 +14,9 @@ try{
     $mydb = 'mysql';
     $table_name = 'products';
     $connect = mysqli_connect($server, $user, $pass);
-$id = $_GET["ID"];
-$desc = $_GET["desc"];
-$tittle = $_GET["tittle"];
+    $id = $_GET["ID"];
+    $desc = $_GET["desc"];
+    $tittle = $_GET["tittle"];
 
 if (!$connect) {
     
@@ -26,16 +26,7 @@ if (!$connect) {
     $sqlCmd = "INSERT INTO $table_name VALUES ('0','{$tittle}','{$desc}');";;
    
     mysqli_select_db($connect,$mydb);
-   // if (mysqli_query($connect, $sql)) {
-    //    $result = mysqli_query($connect, $sql);
-        
-     //    Return the number of rows in result set
-      //  $rowcount = mysqli_num_rows( $result );
-    
-        
-    //}
-   
-   // $SQLcmd = "INSERT INTO $table_name (ProductID, Product_desc, Cost, Weight, Numb) VALUES ('0','{$desc}','{$cost}','{$weight}','{$num}');";
+
     if($id){
         if(mysqli_query($connect, $sqlCmd)){
             print $sqlCmd;
