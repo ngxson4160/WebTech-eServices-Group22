@@ -465,11 +465,13 @@
                             <button class="btn-flat btn-hover" id="filter-toggle">filter</button>
                         </div>
                         <div class="box">
-                            <div id = "ajaxDump">ABC</div>
+                            
                             <div class="row" id="products">
                             
                             
-                            <?php /*while($row = mysqli_fetch_array($data["listProd"])){
+                            <?php
+                            if(isset($data["listProd"])){
+                                 while($row = mysqli_fetch_array($data["listProd"])){
                 
                 echo '
                 <div class="col-4 col-md-6 col-sm-12">
@@ -499,7 +501,8 @@
                 </div>
         </div>
                            ';
-                            }*/
+                            }
+                        }
                             ?>
                         </div>
                         <div class="box">
