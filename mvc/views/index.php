@@ -418,10 +418,13 @@
                 <h2>Latest product</h2>
             </div>
             <div class="row" id="latest-products">
-                <div class="col-3 col-md-6 col-sm-12">
+            <?php if(isset($data["list"])){
+                while($row = mysqli_fetch_array($data["list"])){
+                echo '<div class="col-3 col-md-6 col-sm-12">
+                <a href = "/prj_test/Product/detail/'.$row["id"].'">
                     <div class="product-card">
                         <div class="product-card-img">
-                            <img src="/prj_test/public/images/JBL_Quantum_400_Product Image_Hero 02.png" alt="">
+                            <img src="'. substr($row["img"],15).'" alt="">
                             <img src="/prj_test/public/images/JBL_Quantum_400_Product Image_Hero Mic Up.webp" alt="">
                         </div>
                         <div class="product-card-info">
@@ -429,12 +432,12 @@
                                 <button class="btn-flat btn-hover btn-shop-now">shop now</button>
                                 <button class="success">
                                     <button class="btn-flat btn-hover btn-cart-add ">
-                                        <i class='bx bxs-cart-add'></i>
+                                        <i class="bx bxs-cart-add"></i>
                                     </button>
                                     
                                 </button>
                                 <button class="btn-flat btn-hover btn-cart-add ">
-                                    <i class='bx bxs-heart'></i>
+                                    <i class="bx bxs-heart"></i>
                                 </button>
                             </div>
                             <div class="product-card-name">
@@ -446,207 +449,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="product-card">
-                        <div class="product-card-img">
-                            <img src="/prj_test/public/images/JBL_Quantum_400_Product Image_Hero 02.png" alt="">
-                            <img src="/prj_test/public/images/JBL_Quantum_400_Product Image_Hero Mic Up.webp" alt="">
-                        </div>
-                        <div class="product-card-info">
-                            <div class="product-btn">
-                                <button class="btn-flat btn-hover btn-shop-now">shop now</button>
-                                <button class="success">
-                                    <button class="btn-flat btn-hover btn-cart-add ">
-                                        <i class='bx bxs-cart-add'></i>
-                                    </button>
-                                    
-                                </button>
-                                <button class="btn-flat btn-hover btn-cart-add ">
-                                    <i class='bx bxs-heart'></i>
-                                </button>
-                            </div>
-                            <div class="product-card-name">
-                                JBL Quantum 400
-                            </div>
-                            <div class="product-card-price">
-                                <span><del>$300</del></span>
-                                <span class="curr-price">$200</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="col-3 col-md-6 col-sm-12">
-                    <div class="product-card">
-                        <div class="product-card-img">
-                            <img src="/prj_test/public/images/JBL_Quantum_400_Product Image_Hero 02.png" alt="">
-                            <img src="/prj_test/public/images/JBL_Quantum_400_Product Image_Hero Mic Up.webp" alt="">
-                        </div>
-                        <div class="product-card-info">
-                            <div class="product-btn">
-                                <button class="btn-flat btn-hover btn-shop-now">shop now</button>
-                                <button class="success">
-                                    <button class="btn-flat btn-hover btn-cart-add ">
-                                        <i class='bx bxs-cart-add'></i>
-                                    </button>
-                                    
-                                </button>
-                                <button class="btn-flat btn-hover btn-cart-add ">
-                                    <i class='bx bxs-heart'></i>
-                                </button>
-                            </div>
-                            <div class="product-card-name">
-                                JBL Quantum 400
-                            </div>
-                            <div class="product-card-price">
-                                <span><del>$300</del></span>
-                                <span class="curr-price">$200</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-card-img">
-                            <img src="/prj_test/public/images/JBL_Quantum_400_Product Image_Hero 02.png" alt="">
-                            <img src="/prj_test/public/images/JBL_Quantum_400_Product Image_Hero Mic Up.webp" alt="">
-                        </div>
-                        <div class="product-card-info">
-                            <div class="product-btn">
-                                <button class="btn-flat btn-hover btn-shop-now">shop now</button>
-                                <button class="success">
-                                    <button class="btn-flat btn-hover btn-cart-add ">
-                                        <i class='bx bxs-cart-add'></i>
-                                    </button>
-                                    
-                                </button>
-                                <button class="btn-flat btn-hover btn-cart-add ">
-                                    <i class='bx bxs-heart'></i>
-                                </button>
-                            </div>
-                            <div class="product-card-name">
-                                JBL Quantum 400
-                            </div>
-                            <div class="product-card-price">
-                                <span><del>$300</del></span>
-                                <span class="curr-price">$200</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="col-3 col-md-6 col-sm-12">
-                    <div class="product-card">
-                        <div class="product-card-img">
-                            <img src="/prj_test/public/images/JBL_Quantum_400_Product Image_Hero 02.png" alt="">
-                            <img src="/prj_test/public/images/JBL_Quantum_400_Product Image_Hero Mic Up.webp" alt="">
-                        </div>
-                        <div class="product-card-info">
-                            <div class="product-btn">
-                                <button class="btn-flat btn-hover btn-shop-now">shop now</button>
-                                <button class="success">
-                                    <button class="btn-flat btn-hover btn-cart-add ">
-                                        <i class='bx bxs-cart-add'></i>
-                                    </button>
-                                    
-                                </button>
-                                <button class="btn-flat btn-hover btn-cart-add ">
-                                    <i class='bx bxs-heart'></i>
-                                </button>
-                            </div>
-                            <div class="product-card-name">
-                                JBL Quantum 400
-                            </div>
-                            <div class="product-card-price">
-                                <span><del>$300</del></span>
-                                <span class="curr-price">$200</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-card-img">
-                            <img src="/prj_test/public/images/JBL_Quantum_400_Product Image_Hero 02.png" alt="">
-                            <img src="/prj_test/public/images/JBL_Quantum_400_Product Image_Hero Mic Up.webp" alt="">
-                        </div>
-                        <div class="product-card-info">
-                            <div class="product-btn">
-                                <button class="btn-flat btn-hover btn-shop-now">shop now</button>
-                                <button class="success">
-                                    <button class="btn-flat btn-hover btn-cart-add ">
-                                        <i class='bx bxs-cart-add'></i>
-                                    </button>
-                                    
-                                </button>
-                                <button class="btn-flat btn-hover btn-cart-add ">
-                                    <i class='bx bxs-heart'></i>
-                                </button>
-                            </div>
-                            <div class="product-card-name">
-                                JBL Quantum 400
-                            </div>
-                            <div class="product-card-price">
-                                <span><del>$300</del></span>
-                                <span class="curr-price">$200</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="col-3 col-md-6 col-sm-12">
-                    <div class="product-card">
-                        <div class="product-card-img">
-                            <img src="/prj_test/public/images/JBL_Quantum_400_Product Image_Hero 02.png" alt="">
-                            <img src="/prj_test/public/images/JBL_Quantum_400_Product Image_Hero Mic Up.webp" alt="">
-                        </div>
-                        <div class="product-card-info">
-                            <div class="product-btn">
-                                <button class="btn-flat btn-hover btn-shop-now">shop now</button>
-                                <button class="success">
-                                    <button class="btn-flat btn-hover btn-cart-add ">
-                                        <i class='bx bxs-cart-add'></i>
-                                    </button>
-                                    
-                                </button>
-                                <button class="btn-flat btn-hover btn-cart-add ">
-                                    <i class='bx bxs-heart'></i>
-                                </button>
-                            </div>
-                            <div class="product-card-name">
-                                JBL Quantum 400
-                            </div>
-                            <div class="product-card-price">
-                                <span><del>$300</del></span>
-                                <span class="curr-price">$200</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-card-img">
-                            <img src="/prj_test/public/images/JBL_Quantum_400_Product Image_Hero 02.png" alt="">
-                            <img src="/prj_test/public/images/JBL_Quantum_400_Product Image_Hero Mic Up.webp" alt="">
-                        </div>
-                        <div class="product-card-info">
-                            <div class="product-btn">
-                                <button class="btn-flat btn-hover btn-shop-now">shop now</button>
-                                <button class="success">
-                                    <button class="btn-flat btn-hover btn-cart-add ">
-                                        <i class='bx bxs-cart-add'></i>
-                                    </button>
-                                    
-                                </button>
-                                <button class="btn-flat btn-hover btn-cart-add ">
-                                    <i class='bx bxs-heart'></i>
-                                </button>
-                            </div>
-                            <div class="product-card-name">
-                                JBL Quantum 400
-                            </div>
-                            <div class="product-card-price">
-                                <span><del>$300</del></span>
-                                <span class="curr-price">$200</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
+                   
+                </a>
+                </div>';
+                }
+                };?>
                 
+                
+              
                 
             </div>
             <div class="section-footer">
