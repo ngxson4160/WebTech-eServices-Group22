@@ -46,6 +46,7 @@ textarea {
 [type="submit"]:hover { background:#CC4949; }
 
 [type="file"] {
+    display: none;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     width: 100%;
     background:#1a2085;
@@ -60,3 +61,10 @@ textarea {
     margin-top:-4px;
     font-weight:700;
   }
+
+  .custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}

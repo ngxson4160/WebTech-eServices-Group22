@@ -1,0 +1,24 @@
+	*****Nhóm 21*****
+
+-Thành viên:
+	Nguyễn Minh Thắng - 20194172
+	Nguyễn Xuân Sơn - 20194160
+	Trần Duy Hùng - 
+	Đào Quang Huân - 20194064
+
+- Mô tả đề tài: 
+	Nhóm chúng em xây dựng website bán hàng online với những tính năng tiện lợi cho cả khách hàng và quản trị viên.
+
+- Những features:
+	Đăng nhập/đăng xuất
+	Đăng kí
+	Xem sản phẩm
+	Xem chi tiết sản phẩm
+	Tìm kiếm sản phẩm
+	Thêm sản phẩm mới
+	Sửa/xóa sản phẩm
+
+- Đóng góp của mỗi thành viên:	
+	Nguyễn Minh Thắng + Nguyễn Xuân Sơn: Code backend, xây dựng batabase, code frontend
+	Trần Duy Hùng + Đào Quang Huân: Code frontend, phân tích yêu cầu
+

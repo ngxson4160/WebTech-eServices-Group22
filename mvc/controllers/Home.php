@@ -26,22 +26,10 @@
             
         }
 
-        function admin(){
-            $this->view("form",[]);
-        }
+        // function admin(){
+        //     $this->view("form",[]);
+        // }
 
-        function show(){
-
-            //Lấy model
-            $teo = Controller::model("SinhVienModel");
-
-            //Lấy view
-            Controller::view("index", [
-                "page" => "SinhVienDetail",
-                "mau" => "blue",
-                "SV" => $teo-> getSinhVien()
-            ]);
-
-        }
+        
     }
 ?>

@@ -2,15 +2,14 @@
     class Register extends Controller {
 
         public $userModel;
+        public $productModel;
         
         function __construct(){
             $this->userModel = $this->model("UserModel");
+            $this->productModel = $this->model("ProductModel");
         }
 
-        public function index(){
-            $this->view("index", [
-            ]);
-        }
+        
 
         public function khachHangDangKi(){
             if(isset($_POST["register"])){
@@ -115,29 +114,88 @@
             if($password == ''){
                     $passErr = "Chưa nhập Password!";
             }
-
+            $list = $this->productModel->findAll(); 
             if($userErr == '' && $passErr == ''){
                 $kq = $this->userModel->selectPassword($userName);
 
                 if(password_verify($password, $kq)){
+                    
+                    $cookie_name = "user";
+                    $cookie_value = $userName;
+                    setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
                     echo "<script type='text/javascript'> 
                         alert('Đăng nhập thành công');
-                        window.location.href='/prj_test/Home';
+                        // window.location.href='/prj_test/Register/admin';
                     </script>";
+                    $this->view("index",[
+                        "user" => $userName,
+                        "list" => $list
+                    ]);
                 }else{
                     $this->view("index", [
-                        "msg1" => "Mật khẩu hoặc tài khoản không đúng!"
+                        "msg1" => "Mật khẩu hoặc tài khoản không đúng!",
+                        "cls" => "block",
+                        "list" => $list
                     ]);
                 }
             } else {
                 $this->view("index",[
                     "cls" => "block",
                     "msg2" => $userErr,
-                    "msg3" => $passErr
+                    "msg3" => $passErr,
+                    "list" => $list
                 ]);
             }
         }
+        public function logout(){
+            if(isset($_POST["logout"])){
+                $cookie_name = "user";
+                    $cookie_value = "";
+                    setcookie($cookie_name, $cookie_value, time() -3600, "/");
+                
+                // unset($_COOKIE["user"]);
+                $list = $this->productModel->findAll(); 
+                $this->view("index",[
+                
+                "list" => $list
+                // "page" => "SinhVienDetail",
+                ]);
+            }
+        }
+        function index(){
+            //Lấy model
+            $list = $this->productModel->findAll(); 
+                // this 
+            
+            //Lấy view
+            Controller::view("index", [
+                "list" => $list
+                // "page" => "SinhVienDetail",
+            ]);
+            
+            
+        }
 
+        function create(){
+            $this->view("form",[]);
+        }
+
+        function admin(){
+            
+            // $this->view("product-crud-table",[]);
+            if(!isset($_COOKIE["user"])){
+                $this->view("index",[]);
+            }
+            else{
+                $list = $this->productModel->findAll();
+                // echo $_COOKIE["user"];
+                if($_COOKIE["user"] == ""){
+                    $this->view("index",["list" => $list]);
+                }
+                else 
+                    $this->view("product-crud-table",["list" => $list]);
+            }
+        }
         
     }
 ?>

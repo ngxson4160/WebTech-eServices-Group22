@@ -92,6 +92,14 @@
                     </div>
                     </form>
                     <ul class="user-menu">
+                    <?php if(isset($data["user"])) echo '
+                        <li><br><button><a href="http://localhost/prj_test/Register/admin">Go to admin management</a></button></li>
+                        <li style = "color: red">Welcome '. $data["user"].
+                    '<br>
+                    <form action = "prj_test/Register/logout" method = "POST">
+                    <button type = "submit" name="logout">LOGOUT</button>
+                    </form>
+                    </li> ';?>
                         <li><a><i class='bx bx-bell'></i></a></li>
                         <li><a><i class='bx bx-user-circle account'></i></a></li>
                         <li><a><i class='bx bx-cart'></i></a></li>
@@ -441,11 +449,11 @@
                                 </button>
                             </div>
                             <div class="product-card-name">
-                                JBL Quantum 400
+                                '.$row["name"].'
                             </div>
                             <div class="product-card-price">
-                                <span><del>$300</del></span>
-                                <span class="curr-price">$200</span>
+                                
+                                <span class="curr-price">'.$row["price"].'</span>
                             </div>
                         </div>
                     </div>
