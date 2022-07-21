@@ -21,5 +21,10 @@
             $result = mysqli_query($this->connect, $query);
             return $result;
         }
+        function deleteById($id){
+            $query = "DELETE FROM product   WHERE id = '$id'";
+            $result = mysqli_query($this->connect, $query);
+            return $result;
+        }
     }
 ?>

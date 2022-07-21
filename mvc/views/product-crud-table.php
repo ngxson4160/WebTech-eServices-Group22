@@ -32,73 +32,14 @@
                             <img src="/prj_test/public/images/JBL_Quantum_400_Product Image_Hero Mic Up.webp" alt="">
                         </div>
                 <div class="col col-5" data-label="Action">
-                  <a href="javascript:void(0)" onclick="deleteEntry(this)" class="btn btn-sm btn-link" data-button-type="delete"><i class="la la-trash"></i> Delete</a>
+                  <a href="http://localhost/prj_test/Product/delete/'.$row["id"].' class="btn btn-sm btn-link" data-button-type="delete"><i class="la la-trash"></i> Delete</a>
                   <a href="form.html" class="btn btn-sm btn-link"><i class="la la-edit"></i> Edit</a>
                 </div>
                 </li>';
         }
       }
-          
-          
-          
-          // '<li class="table-header">
-          //         <div class="col col-1 title">'.$row["name"].'</div>
-          //         <div class="col col-2 title">'.$row["descriptions"].'</div>
-          //         <div class="col col-3 title">'.$row["price"].'</div>
-          //         <div class="product-card-img">
-          //                   <img src="'. substr($row["img"],15).'" alt="" style="height: 100px; width: 100px">
-          //                   <img src="/prj_test/public/images/JBL_Quantum_400_Product Image_Hero Mic Up.webp" alt="">
-          //               </div>
-          //         <div class="col col-5 title title_1">Action</div>
-          //       </li>';
-          //       }
-          //       };
+        
     ?>
-      <!-- <li class="table-header">
-        <div class="col col-1 title">Name</div>
-        <div class="col col-2 title">Describe</div>
-        <div class="col col-3 title">Price</div>
-        <div class="col col-4 title">Image</div>
-        <div class="col col-5 title title_1">Action</div>
-      </li>
-      <li class="table-row">
-        <div class="col col-1" data-label="Name"></div>
-        <div class="col col-2" data-label="Describe">John Doe</div>
-        <div class="col col-3" data-label="Price">$350</div>
-        <div class="col col-4" data-label="Image">Pending</div>
-        <div class="col col-5" data-label="Action">
-          <a href="javascript:void(0)" onclick="deleteEntry(this)" class="btn btn-sm btn-link" data-button-type="delete"><i class="la la-trash"></i> Delete</a>
-          <a href="form.html" class="btn btn-sm btn-link"><i class="la la-edit"></i> Edit</a>
-        </div>
-      </li>
-      <li class="table-row">
-        <div class="col col-1" data-label="Name">42235</div>
-        <div class="col col-2" data-label="Describe">John Doe</div>
-        <div class="col col-3" data-label="Price">$350</div>
-        <div class="col col-4" data-label="Image">Pending</div>
-        <div class="col col-5" data-label="Action">
-          <a href="javascript:void(0)" onclick="deleteEntry(this)" class="btn btn-sm btn-link" data-button-type="delete"><i class="la la-trash"></i> Delete</a>
-          <a href="form.html" class="btn btn-sm btn-link"><i class="la la-edit"></i> Edit</a>
-        </div>
-      </li><li class="table-row">
-        <div class="col col-1" data-label="Name">42235</div>
-        <div class="col col-2" data-label="Describe">John Doe</div>
-        <div class="col col-3" data-label="Price">$350</div>
-        <div class="col col-4" data-label="Image">Pending</div>
-        <div class="col col-5" data-label="Action">
-          <a href="javascript:void(0)" onclick="deleteEntry(this)" class="btn btn-sm btn-link" data-button-type="delete"><i class="la la-trash"></i> Delete</a>
-          <a href="form.html" class="btn btn-sm btn-link"><i class="la la-edit"></i> Edit</a>
-        </div>
-      </li><li class="table-row">
-        <div class="col col-1" data-label="Name">42235</div>
-        <div class="col col-2" data-label="Describe">John Doe</div>
-        <div class="col col-3" data-label="Price">$350</div>
-        <div class="col col-4" data-label="Image">Pending</div>
-        <div class="col col-5" data-label="Action">
-          <a href="javascript:void(0)" onclick="deleteEntry(this)" class="btn btn-sm btn-link" data-button-type="delete"><i class="la la-trash"></i> Delete</a>
-          <a href="form.html" class="btn btn-sm btn-link"><i class="la la-edit"></i> Edit</a>
-        </div>
-      </li> -->
     </ul>
   </div>
 </html>

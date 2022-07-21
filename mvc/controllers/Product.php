@@ -45,6 +45,18 @@ class Product extends Controller {
             "product"=>$product
         ]);
     }
+    public function delete(){
+        if(isset($_GET["url"])){
+            $url = explode("/", filter_var(trim($_GET["url"], "/")));
+        }
+        $id = $url[2];
+        $product = $this->productModel->deleteById($id);
+        
+        $list = $this->productModel->findAll();
+        $this->view("product-crud-table",[
+            "list" => $list
+        ]);
+    }
     public function addProduct(){
         // /img upload
         $target_dir = $_SERVER['DOCUMENT_ROOT']."/prj_test/public/images/";
